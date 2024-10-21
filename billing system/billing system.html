@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Billing System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Grocery Billing System</h1>
+
+<div>
+    <label for="customerName">Customer Name:</label>
+    <input type="text" id="customerName" required>
+    
+    <label for="itemName">Item Name:</label>
+    <input type="text" id="itemName" required>
+    
+    <label for="itemPrice">Item Price:</label>
+    <input type="number" id="itemPrice" required min="0" step="0.01">
+    
+    <label for="itemQuantity">Item Quantity:</label>
+    <input type="number" id="itemQuantity" required min="1">
+
+    <button onclick="addItem()">Add Item</button>
+    <button onclick="clearInputs()">Clear</button>
+</div>
+
+<h2>Receipt</h2>
+<table id="receiptTable">
+        <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+        </tr>
+    <tbody id="receiptBody">
+    </tbody>
+</table>
+<div class="total" id="totalAmount">Total Amount: ₹0.00</div>
+<button onclick="clearRecipt()">Clear Receipt</button>
+<button onclick="printReceipt()">Print Receipt</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
